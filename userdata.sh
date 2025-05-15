@@ -7,8 +7,8 @@ apt install python3-pip -y
 pip3 install boto3 -y
 apt  install awscli -y
 cd /home/ubuntu/
-TOKEN=$(aws --region=us-east-1 ssm get-parameter --name /<yourname>/capstone/token --with-decryption --query 'Parameter.Value' --output text)
-git clone https://$TOKEN@github.com/<your-repo>/aws-capstone.git
+TOKEN=$(aws --region=us-east-1 ssm get-parameter --name /ondia/capstone/token --with-decryption --query 'Parameter.Value' --output text)
+git clone https://$TOKEN@github.com/Seyma4270/aws-capstone.git
 cd /home/ubuntu/aws-capstone
 apt-get install python3.10-dev default-libmysqlclient-dev -y 
 pip3 install -r requirements.txt
